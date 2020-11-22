@@ -51,16 +51,11 @@ $help .= '<p>' . __( 'Links in the Toolbar at the top of the screen connect your
 
 $screen->add_help_tab(
 	array(
-		'id'      => 'help-navigation',
-		'title'   => __( 'Navigation' ),
-		'content' => $help,
+		
 	)
 );
 
-$help  = '<p>' . __( 'You can use the following controls to arrange your Dashboard screen to suit your workflow. This is true on most other administration screens as well.' ) . '</p>';
-$help .= '<p>' . __( '<strong>Screen Options</strong> &mdash; Use the Screen Options tab to choose which Dashboard boxes to show.' ) . '</p>';
-$help .= '<p>' . __( '<strong>Drag and Drop</strong> &mdash; To rearrange the boxes, drag and drop by clicking on the title bar of the selected box and releasing when you see a gray dotted-line rectangle appear in the location you want to place the box.' ) . '</p>';
-$help .= '<p>' . __( '<strong>Box Controls</strong> &mdash; Click the title bar of the box to expand or collapse it. Some boxes added by plugins may have configurable content, and will show a &#8220;Configure&#8221; link in the title bar if you hover over it.' ) . '</p>';
+&#8220;Configure&#8221; link in the title bar if you hover over it.' ) . '</p>';
 
 $screen->add_help_tab(
 	array(
@@ -160,7 +155,7 @@ if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) )
 	?>
 
 	<div id="welcome-panel" class="<?php echo esc_attr( $classes ); ?>">
-		<?php wp_nonce_field( 'welcome-panel-nonce', 'welcomepanelnonce', false ); ?>
+		<?php wp_nonce_field(-panel-nonce', 'welcomepanelnonce', false ); ?>
 		<a class="welcome-panel-close" href="<?php echo esc_url( admin_url( '?welcome=0' ) ); ?>" aria-label="<?php esc_attr_e( 'Dismiss the welcome panel' ); ?>"><?php _e( 'Dismiss' ); ?></a>
 		<?php
 		/**
@@ -178,7 +173,7 @@ if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) )
 <?php endif; ?>
 
 	<div id="dashboard-widgets-wrap">
-	<?php wp_dashboard(); ?>
+	<?phpdashboard(); ?>
 	</div><!-- dashboard-widgets-wrap -->
 
 </div><!-- wrap -->
